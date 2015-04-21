@@ -1,0 +1,100 @@
+extends layout
+
+block content
+  #page-wrapper
+      br
+      .row
+        .col-lg-4
+         .form-group.input-group
+               input.form-control(type='text' placeholder='Enter styleIDs...')
+               span.input-group-btn
+                 button.btn.btn-default(type='button')
+                   i.fa.fa-search
+        // /.col-lg-4
+      // /.row
+      .row
+            .col-lg-12
+              .panel.panel-default
+                .panel-heading
+                  | Video Upload Details
+                // /.panel-heading
+                .panel-body(style='max-height:200px ;overflow-y: scroll;')
+                  .table-responsive
+                    table.table.table-striped.table-bordered.table-hover
+                      thead
+                        tr
+                          th Preview
+                          th Style Id
+                          th Product Name
+                          th Youtube
+                          th Wistia
+                          th Action
+                      tbody
+                        tr
+                          td 
+                            .radio
+                            label
+                              input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+                          td 653210
+                          td Ellie Women Wite Printed Top
+                          td 
+                            .progress.progress-striped.active
+                              .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                          td 
+                            .progress.progress-striped.active
+                              .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+
+                        tr
+                          td 2
+                          td Jacob
+                          td Thornton
+                          td @fat
+                        tr
+                          td 3
+                          td Larry
+                          td the Bird
+                          td @twitter
+                        tr
+                          td 1
+                          td Mark
+                          td Otto
+                          td @mdo
+                        tr
+                          td 2
+                          td Jacob
+                          td Thornton
+                          td @fat
+                        tr
+                          td 3
+                          td Larry
+                          td the Bird
+                          td @twitter
+                        tr
+                          td 1
+                          td Mark
+                          td Otto
+                          td @mdo
+                        tr
+                          td 2
+                          td Jacob
+                          td Thornton
+                          td @fat
+                        tr
+                          td 3
+                          td Larry
+                          td the Bird
+                          td @twitter
+                  // /.table-responsive
+                // /.panel-body
+              // /.panel
+      .row
+        .col-lg-6
+          iframe(width='550', height='300', src='http://www.youtube.com/embed/mkNckUyuX28k')
+        .col-lg-6
+          iframe(src='http://fast.wistia.net/embed/iframe/abcde12345' width='550' height='300')
+
+
+      
+
+      
+      

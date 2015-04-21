@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  #page-wrapper
+      .row
+        .col-lg-12
+          h1.page-header Dashboard
+        // /.col-lg-12
+      // /.row
+      .row
+        .col-lg-4
+          form(action='/',method='post')
+            .input-group.custom-search-form
+              input.form-control(type='text',name='styleid', placeholder='StyleId...')
+              span.input-group-btn
+                button.btn.btn-default(type='submit')
+                  i.fa.fa-search
+            // /input-group
+        // /.col-lg-4
+      // /.row
+      
+      
