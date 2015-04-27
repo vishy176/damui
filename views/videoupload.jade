@@ -10,7 +10,7 @@ block content
                   form(role='form')
                     .form-group
                       label StyleId
-                      input.form-control(placeholder='StyleID')
+                      input#styleid.form-control(nameplaceholder='StyleID')
                     .form-group
                       label Image File
                       input(type='file')
@@ -18,3 +18,26 @@ block content
                       label Video File
                       input(type='file')
                     button.btn.btn-primary(type='submit') Upload & Continue
+  script.
+    $(document).ready(function(){
+      $('#styleid').blur(function() {
+      var data = {};
+      $.ajax({
+                  type: 'GET',               
+                  data: JSON.stringify(data),
+                  jsonp: 'callback',
+                  url: 'http://localhost:3000/styleid?styleId='+ document.getElementById("styleid").value+'?callback=?',
+                  succes: function(data) {
+                              alert("ygayscad");
+                              console.log('success');
+                              console.log(JSON.stringify(data));
+                          },
+                  error: function(err) {
+                              alert(err+"error");
+                          }
+              });
+      });
+    });
+
+
+
